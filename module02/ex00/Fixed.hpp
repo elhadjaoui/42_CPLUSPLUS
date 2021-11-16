@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 15:16:50 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/14 18:19:30 by mel-hadj         ###   ########.fr       */
+/*   Created: 2021/11/15 23:29:30 by mel-hadj          #+#    #+#             */
+/*   Updated: 2021/11/16 00:53:40 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _KAREN_H
-#define _KAREN_H
-
 #include <iostream>
-#include <string>
 
-class Karen
+class Fixed
 {
-	void debug(void);
-	void info( void );
-	void warning( void );
-	void error( void );
-	public:
-		void complain( std::string level );
+public:
+    Fixed();
+    Fixed(Fixed &);
+    Fixed &operator=(Fixed &) ;
+    ~Fixed();
+    int getRawBits() const ; // const corectness
+    void setRawBits( int const raw ); 
+private:
+    int fixed_point;
+    static int const fractional_bits = 8;
 };
-#endif
+

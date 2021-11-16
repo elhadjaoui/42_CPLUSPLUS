@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/14 15:16:46 by mel-hadj          #+#    #+#             */
+/*   Updated: 2021/11/14 15:52:45 by mel-hadj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Karen.hpp"
 
 void Karen::debug()
@@ -22,7 +34,20 @@ void Karen::error()
 }
 void Karen::complain(std::string level)
 {
-	level[0] = &debug();
-	level[1] = &info();
-	level[2] = &warning();
-	level[3] = &error();
+	
+	void (Karen::*leve[4])()  = {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error};
+	std::string enumm[4] = {"DEBUG", "INFO", "WARNING", "ERROR"} ;
+	int i;
+
+	i = 0;
+	while (i < 4)
+	{
+		while (level == enumm[i])
+		{
+			(this->*leve[i]) ();
+			break ;
+		}
+		i++;
+	}
+	
+} 

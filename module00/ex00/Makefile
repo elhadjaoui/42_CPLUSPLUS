@@ -1,18 +1,17 @@
 NAME = 			megaphone
 
-CC =			clang++ -std=c++03
+CC =			clang++ -std=c++98
 
 FLAGS =			-Wall -Wextra -Werror
 
 RM =			rm -rf
 
-SANITIZE = -fsanitize=address
 
 SRC =			 megaphone.cpp
 			
 all:			$(NAME)
 
-$(NAME) :
+$(NAME) :		$(SRC)
 				@$(CC) $(FLAGS)  $(SRC) -o $(NAME)
 				
 clean:

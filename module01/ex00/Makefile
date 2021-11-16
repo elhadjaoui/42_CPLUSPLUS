@@ -12,7 +12,7 @@ SRC =			newZombie.cpp main.cpp randomChump.cpp Zombie.cpp
 all:			$(NAME) 
 
 $(NAME) :		$(SRC) Zombie.hpp
-				@$(CC) -I Zombie.hpp  $(SRC) -o $(NAME)
+				@$(CC)  $(SRC) -o $(NAME)
 				
 clean:
 

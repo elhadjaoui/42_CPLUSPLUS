@@ -11,7 +11,7 @@ SRC =			main.cpp Karen.cpp
 			
 all:			$(NAME) 
 
-$(NAME) :		$(SRC) 
+$(NAME) :		$(SRC) Karen.hpp
 				@$(CC)  $(SRC) -o $(NAME)
 				
 clean:

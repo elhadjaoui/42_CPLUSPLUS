@@ -1,17 +1,17 @@
-NAME = 			karenFilter	
+NAME = 			OCCF
 
 CC =			clang++ -std=c++98
 
 FLAGS =			-Wall -Wextra -Werror
 
 RM =			rm -rf
-	
 
-SRC =			main.cpp Karen.cpp 
+
+SRC =			main.cpp Fixed.cpp
 			
 all:			$(NAME) 
 
-$(NAME) :		$(SRC) Karen.hpp
+$(NAME) :		$(SRC) Fixed.hpp
 				@$(CC)  $(SRC) -o $(NAME)
 				
 clean:

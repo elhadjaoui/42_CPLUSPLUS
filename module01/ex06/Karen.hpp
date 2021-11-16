@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 15:16:50 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/14 15:16:51 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/14 20:40:14 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,5 @@ class Karen
 	void error( void );
 	public:
 		void complain( std::string level );
-
-
 };
 #endif
