@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 00:41:58 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/16 01:10:57 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/18 21:53:22 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Fixed& Fixed::operator=(Fixed &fixed)
 }
 Fixed::Fixed(Fixed &fixed)
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
     this->fixed_point = fixed.fixed_point;
 }
 

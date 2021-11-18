@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:29:30 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/18 22:43:56 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/19 00:09:20 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,23 @@ public:
     Fixed(const int num);
     Fixed(const float num);
     Fixed &operator=(const Fixed &fixed);
+    bool operator >  (const Fixed &fixed2);
+    bool operator <  (const Fixed &fixed2);
+    bool operator == (const Fixed &fixed2);
+    bool operator >= (const Fixed &fixed2);
+    bool operator <= (const Fixed &fixed2);
+    bool operator != (const Fixed &fixed2);
+    
+    int operator + (const Fixed &fixed2);
+    int operator - (const Fixed &fixed2);
+    int operator * (const Fixed &fixed2);
+    int operator / (const Fixed &fixed2);
+
+    int operator ++(void); // ++a
+    int operator ++(int);  // a++
+    int operator --(void); // --a
+    int operator --(int);  // a--
+    
     ~Fixed();
     int toInt() const ; // const corectness
     float toFloat() const ; 
