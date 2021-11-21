@@ -1,19 +1,19 @@
-NAME = 			violence
+NAME = 			FragTrap
 
 CC =			clang++ -std=c++98
 
 FLAGS =			-Wall -Wextra -Werror
 
+HEADERS =		 ClapTrap.Hpp ScavTrap.Hpp  FragTrap.Hpp 
+
 RM =			rm -rf
 
-HEADERS = 		HumanA.hpp HumanB.hpp Weapon.hpp
 
-
-SRC =			main.cpp HumanA.cpp HumanB.cpp Weapon.cpp 
+SRC =			main.cpp ClapTrap.cpp ScavTrap.cpp  FragTrap.cpp 
 			
 all:			$(NAME) 
 
-$(NAME) :		$(SRC)  $(HEADERS)
+$(NAME) :		$(SRC) ${HEADERS}
 				@$(CC)  $(SRC) -o $(NAME)
 				
 clean:

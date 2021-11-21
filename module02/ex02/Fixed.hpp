@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 23:29:30 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/19 00:09:20 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/19 22:21:38 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,21 @@ public:
     bool operator <= (const Fixed &fixed2);
     bool operator != (const Fixed &fixed2);
     
-    int operator + (const Fixed &fixed2);
-    int operator - (const Fixed &fixed2);
-    int operator * (const Fixed &fixed2);
-    int operator / (const Fixed &fixed2);
+    float operator + (const Fixed &fixed2);
+    float operator - (const Fixed &fixed2);
+    float operator * (const Fixed &fixed2);
+    float operator / (const Fixed &fixed2);
 
-    int operator ++(void); // ++a
-    int operator ++(int);  // a++
-    int operator --(void); // --a
-    int operator --(int);  // a--
+    Fixed operator ++(void); // ++a
+    Fixed operator ++(int);  // a++
+    Fixed operator --(void); // --a
+    Fixed operator --(int);  // a--
     
+    static Fixed& min(Fixed &, Fixed &);
+    static Fixed& max(Fixed &, Fixed &);
+
+    const static Fixed& min(const Fixed &, const Fixed &);
+    const static Fixed& max(const Fixed &, const Fixed &);
     ~Fixed();
     int toInt() const ; // const corectness
     float toFloat() const ; 

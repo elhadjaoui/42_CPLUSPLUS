@@ -17,7 +17,7 @@ $(NAME) :		$(SRC) Zombie.hpp
 clean:
 
 fclean:			clean
-				@$(RM) $(NAME) $(CLIENT) 			
+				@$(RM) $(NAME) 			
 
 re:				fclean all
 

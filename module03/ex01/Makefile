@@ -1,19 +1,19 @@
-NAME = 			violence
+NAME = 			ScavTrap
 
 CC =			clang++ -std=c++98
 
 FLAGS =			-Wall -Wextra -Werror
 
+HEADERS =		 ClapTrap.Hpp ScavTrap.Hpp 
+
 RM =			rm -rf
 
-HEADERS = 		HumanA.hpp HumanB.hpp Weapon.hpp
 
-
-SRC =			main.cpp HumanA.cpp HumanB.cpp Weapon.cpp 
+SRC =			main.cpp ClapTrap.cpp ScavTrap.cpp
 			
 all:			$(NAME) 
 
-$(NAME) :		$(SRC)  $(HEADERS)
+$(NAME) :		$(SRC) ${HEADERS}
 				@$(CC)  $(SRC) -o $(NAME)
 				
 clean:

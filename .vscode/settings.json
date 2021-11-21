@@ -1,6 +1,6 @@
 {
     "files.associations": {
-        "*.hpp": "cpp",
+        "iostream": "cpp",
         "__bit_reference": "cpp",
         "__config": "cpp",
         "__debug": "cpp",
@@ -41,7 +41,6 @@
         "iomanip": "cpp",
         "ios": "cpp",
         "iosfwd": "cpp",
-        "iostream": "cpp",
         "istream": "cpp",
         "iterator": "cpp",
         "limits": "cpp",
