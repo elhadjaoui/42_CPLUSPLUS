@@ -1,0 +1,32 @@
+main.cpp:23:18: error: 'this' argument to member function 'getType' has type 'const Animal', but function is not marked const
+    std::cout << j->getType() << " " << std::endl;
+                 ^
+./Animal.hpp:29:23: note: 'getType' declared here
+    const std::string getType();
+                      ^
+main.cpp:24:18: error: 'this' argument to member function 'getType' has type 'const Animal', but function is not marked const
+    std::cout << i->getType() << " " << std::endl;
+                 ^
+./Animal.hpp:29:23: note: 'getType' declared here
+    const std::string getType();
+                      ^
+main.cpp:25:5: error: 'this' argument to member function 'makeSound' has type 'const Animal', but function is not marked const
+    i->makeSound(); //will output the cat sound!
+    ^
+./Animal.hpp:30:16: note: 'makeSound' declared here
+    const void makeSound();
+               ^
+main.cpp:26:5: error: 'this' argument to member function 'makeSound' has type 'const Animal', but function is not marked const
+    j->makeSound();
+    ^
+./Animal.hpp:30:16: note: 'makeSound' declared here
+    const void makeSound();
+               ^
+main.cpp:27:5: error: 'this' argument to member function 'makeSound' has type 'const Animal', but function is not marked const
+    meta->makeSound();
+    ^~~~
+./Animal.hpp:30:16: note: 'makeSound' declared here
+    const void makeSound();
+               ^
+5 errors generated.
+make: *** [Poly] Error 1
