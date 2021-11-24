@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:48:42 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:46:57 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/24 23:22:48 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ Dog::Dog()
 {
     std::cout << "Dog's Constructor called" << std::endl;
     this->type = "Dog";
+    this->brain = new Brain();
 }
 
 Dog::~Dog()
 {
     std::cout << "Dog's Destructor called" << std::endl;
+    delete this->brain;
 }
 
 Dog & Dog::operator=(Dog & breed)
@@ -45,7 +47,7 @@ void Dog::setType(std::string type)
 {
     this->type = type;
 }
-std::string Dog::getType()
+std::string Dog::getType() const
 {
     return (this->type);
 }

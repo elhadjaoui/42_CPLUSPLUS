@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 21:48:57 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:47:03 by mel-hadj         ###   ########.fr       */
+/*   Created: 2021/11/23 21:39:43 by mel-hadj          #+#    #+#             */
+/*   Updated: 2021/11/24 23:19:12 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef _DOG_H
-#define _DOG_H
 
 #include <iostream>
 #include <string>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-
-class Dog : public Animal
+class Cat : public Animal
 {
+
+private:
+    Brain *brain;
+
 protected:
     std::string type;
+
 public:
-    Dog();
-    Dog(Dog &);
-    Dog& operator=(Dog &);
-    ~Dog();
+    Cat();
+    Cat(Cat &);
+    Cat &operator=(Cat &);
+    ~Cat();
     void makeSound() const;
-    std::string getType();
+    std::string getType() const;
     void setType(std::string);
+    Brain *getBrain();
 };
-
-#endif
-

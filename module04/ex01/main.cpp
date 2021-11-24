@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 21:48:57 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:47:03 by mel-hadj         ###   ########.fr       */
+/*   Created: 2021/11/23 22:17:36 by mel-hadj          #+#    #+#             */
+/*   Updated: 2021/11/24 23:40:56 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _DOG_H
-#define _DOG_H
-
-#include <iostream>
-#include <string>
 #include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-
-class Dog : public Animal
+int main(void)
 {
-protected:
-    std::string type;
-public:
-    Dog();
-    Dog(Dog &);
-    Dog& operator=(Dog &);
-    ~Dog();
-    void makeSound() const;
-    std::string getType();
-    void setType(std::string);
-};
+    Cat *cat = new Cat();
+    Cat *cat1 = new Cat();
+    cat1 = cat;
 
-#endif
+    std::cout << cat->getBrain() << std::endl;
+    std::cout << cat1->getBrain();
+    delete cat;
 
+    delete cat1;
+    
+}
