@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/25 18:02:12 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/15 23:21:54 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/29 23:09:26 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int ac, char **av)
 {
     if (ac <= 1)
     {
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
         return (1);
     }
     for (int i = 1; i < ac; i++)
@@ -26,9 +26,7 @@ int main(int ac, char **av)
         {
             std::cout << (char)toupper(*c);
         }
-        if ( i != ac - 1)
-            std::cout << " ";
     }
-
+  std::cout << std::endl;
     return 0;
 }

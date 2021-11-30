@@ -1,4 +1,4 @@
-NAME = 			Poly
+NAME = 			Abstract
 
 CC =			clang++ -std=c++98
 

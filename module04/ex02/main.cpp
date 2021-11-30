@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 21:19:25 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/27 17:51:01 by mel-hadj         ###   ########.fr       */
+/*   Created: 2021/11/23 22:17:36 by mel-hadj          #+#    #+#             */
+/*   Updated: 2021/11/27 20:54:16 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _ANIMAL_H
-#define _ANIMAL_H
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-#include <iostream>
-#include <string>
-
-class Animal
+int main(void)
 {
-protected:
-    std::string type;
-public:
-    Animal();
-    Animal(Animal &);
-    Animal& operator=(Animal &);
-    virtual ~Animal();
-    void setType(std::string);
-    virtual std::string getType() const ;
-    virtual void makeSound() const ;
-};
-
-#endif
-
+   
+    Animal & an();
+}

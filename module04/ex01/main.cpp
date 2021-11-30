@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 22:17:36 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 23:40:56 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/11/27 20:29:04 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,37 @@
 
 int main(void)
 {
-    Cat *cat = new Cat();
-    Cat *cat1 = new Cat();
-    cat1 = cat;
+    Animal* animal[4];
 
-    std::cout << cat->getBrain() << std::endl;
-    std::cout << cat1->getBrain();
-    delete cat;
+    for (int i = 0; i < 4; i++)
+    {
+        if (i < 2)
+            animal[i] = new Cat();
+        else
+            animal[i] = new Dog();
+    }
+    for (int i = 0; i < 4; i++)
+    {
+       delete animal[i];
+    }
+  
+    // deep copy test
 
-    delete cat1;
+    {
+        Cat *cat = new Cat();
+        Cat *cat1 = new Cat();
+        cat->getBrain()->ideas[0] = "think";
+        *cat1 = *cat;
+        std::cout << cat1->getBrain()->ideas[0] << std::endl;
+        cat->getBrain()->ideas[0] = "world";
+        std::cout << cat1->getBrain()->ideas[0] << std::endl;
+        delete cat;
+        delete cat1;
+    }
+
+    while (1)
+    {
+        /* code */
+    }
     
 }
