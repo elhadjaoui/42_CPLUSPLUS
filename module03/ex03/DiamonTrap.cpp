@@ -14,31 +14,31 @@
 
 DiamonTrap::DiamonTrap()
 {
-    std::cout << "Anonymous Created from DiamonTrap" << std::endl;
     this->Name = "Anonymous";
-    ClapTrap::Name = "Anonymous";
-    this->Hitpoints = FragTrap::Hitpoints;
-    this->Energie_points = DiamonTrap::Energie_points;
-    this->Attack_damage = FragTrap::Attack_damage;
+    ClapTrap::name = "Anonymous_clap_name";
+    this->hitpoints = FragTrap::hitpoints;
+    this->energy = DiamonTrap::energy;
+    this->attack_damage = FragTrap::attack_damage;
+    std::cout << "Anonymous Created from DiamonTrap" << std::endl;
 }
 
-DiamonTrap::DiamonTrap(std::string name) : FragTrap(name ), ScavTrap(name), ClapTrap(name)
+DiamonTrap::DiamonTrap(std::string name) : ClapTrap(name) , ScavTrap(name), FragTrap(name )
 {
+    this->Name = name;
+    ClapTrap::name = name + "_clap_name";
+    this->hitpoints = FragTrap::hitpoints;
+    this->energy = ScavTrap::energy;
+    this->attack_damage = FragTrap::attack_damage;
     std::cout << name << " Created from  DiamonTrap" << std::endl;
-     this->Name = name;
-    ClapTrap::Name = name;
-    this->Hitpoints = FragTrap::Hitpoints;
-    this->Energie_points = ScavTrap::Energie_points;
-    this->Attack_damage = FragTrap::Attack_damage;
 }
 
 DiamonTrap& DiamonTrap::operator=(DiamonTrap &diamonTrap)
 {
     std::cout << "Assignation operator called" << std::endl;
     this->Name = diamonTrap.Name;
-    this->Attack_damage = diamonTrap.Attack_damage;
-    this->Energie_points = diamonTrap.Energie_points;
-    this->Hitpoints = diamonTrap.Hitpoints;
+    this->attack_damage = diamonTrap.attack_damage;
+    this->energy = diamonTrap.energy;
+    this->hitpoints = diamonTrap.hitpoints;
     return (diamonTrap);
 }
 DiamonTrap::DiamonTrap(DiamonTrap &diamonTrap)
@@ -62,6 +62,11 @@ void DiamonTrap::highFivesGuys(void)
 {
     std::cout << "Welcome " << this->Name;
 }
+
+ void DiamonTrap::whoAmI()
+ {
+     std::cout << "DiamonTrap Name : " << this->Name << " ClapTrap Name : " << ClapTrap::name << std::endl;
+ }
 
 std::string DiamonTrap::getName()
 {

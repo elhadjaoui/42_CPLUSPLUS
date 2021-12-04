@@ -12,7 +12,7 @@ SRC =			main.cpp ClapTrap.cpp
 all:			$(NAME) 
 
 $(NAME) :		$(SRC) ClapTrap.hpp
-				@$(CC)  $(SRC) -o $(NAME)
+				@$(CC) $(FLAGS) $(SRC) -o $(NAME)
 				
 clean:
 

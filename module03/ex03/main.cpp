@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 01:41:43 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/21 03:29:45 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 12:31:17 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int main(void)
   obj.attack("jjj");
   obj.highFivesGuys();
   obj.guardGate();
+  obj.whoAmI();
   
-    DiamonTrap obj1;
+  DiamonTrap obj1;
+  obj1.whoAmI();
 }

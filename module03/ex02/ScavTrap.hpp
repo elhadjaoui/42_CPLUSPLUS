@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 02:08:31 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/21 01:34:18 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 11:56:45 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include "ClapTrap.hpp"
 
 
-class ScavTrap : ClapTrap
+class ScavTrap : public ClapTrap
 {
 public:
     ScavTrap();

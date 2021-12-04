@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 23:59:12 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/01 02:41:08 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:05:22 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ public:
     int getGrade() const;
     void increment();
     void decrement();
+    bool signForm(int, std::string);
   
 };
   std::ostream& operator <<(std::ostream&, const Bureaucrat &);

@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:48:44 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/11 20:02:12 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/01 07:08:50 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,15 @@ int main(int argc, const char **argv)
 
         if (myfile.is_open())
         {
+            if (myfile.peek() == EOF)
+            {
+                 std::cout << "file is empty";
+                 return 1;
+            }
+                    
              std::ofstream myfile_replace(output_file);
-             if (!myfile.is_open())
-                return (1);
+            //  if (!myfile.is_open())
+            //     return (1);
             while (std::getline(myfile, line))
             {
                 std::size_t found = 0;

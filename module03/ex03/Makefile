@@ -14,7 +14,7 @@ SRC =			main.cpp ClapTrap.cpp ScavTrap.cpp  FragTrap.cpp  DiamonTrap.cpp
 all:			$(NAME) 
 
 $(NAME) :		$(SRC) ${HEADERS}
-				@$(CC)  $(SRC) -o $(NAME)
+				@$(CC)  $(FLAGS) $(SRC) -o $(NAME)
 				
 clean:
 

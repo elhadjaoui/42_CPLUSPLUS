@@ -12,7 +12,7 @@ SRC =			main.cpp
 all:			$(NAME) 
 
 $(NAME) :		$(SRC) 
-				@$(CC)  $(SRC) -o $(NAME)
+				@$(CC)  $(FLAGS) $(SRC) -o $(NAME)
 				
 clean:
 

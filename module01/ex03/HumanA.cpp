@@ -6,14 +6,14 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 15:21:28 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/10 22:46:29 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/01 02:36:27 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
 
-HumanA::HumanA(std::string name, Weapon& weapon):weapon(weapon)
+HumanA::HumanA(std::string name, Weapon& weapon) : weapon(weapon)
 {
     this->name = name;
 }

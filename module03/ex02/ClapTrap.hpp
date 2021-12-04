@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 23:45:43 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/21 03:33:52 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 11:54:28 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ public:
     std::string getName();
     void setName(std::string);
 protected:
-    std::string Name;
-    int Hitpoints;
-    int Attack_damage;
-    int Energie_points;
+    std::string name;
+    int hitpoints;
+    int attack_damage;
+    int energy;
 };
 
 #endif // !_CLAPTRAP_H

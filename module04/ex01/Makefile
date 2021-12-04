@@ -14,7 +14,7 @@ SRC =			main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 all:			$(NAME) 
 
 $(NAME) :		$(SRC) ${HEADERS}
-				@$(CC)  $(SRC) -o $(NAME) 
+				@$(CC)  $(FLAGS) $(SRC) -o $(NAME) 
 				
 clean:
 

@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 00:01:22 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/21 03:35:15 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 11:30:30 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 ClapTrap::ClapTrap()
 {
     std::cout << "Anonymous Created from ClapTrap" << std::endl;
-    this->Name = "Anonymous";
-    this->Hitpoints = 10;
-    this->Energie_points = 10;
-    this->Attack_damage = 0;
+    this->name = "Anonymous";
+    this->hitpoints = 10;
+    this->energy = 10;
+    this->attack_damage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name)
 {
     std::cout << name << " Created from ClapTrap" << std::endl;
-    this->Name = name;
-    this->Hitpoints = 10;
-    this->Energie_points = 10;
-    this->Attack_damage = 0;
+    this->name = name;
+    this->hitpoints = 10;
+    this->energy = 10;
+    this->attack_damage = 0;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap &clapTrap)
 {
     std::cout << "Assignation operator called" << std::endl;
-    this->Name = clapTrap.Name;
-    this->Attack_damage = clapTrap.Attack_damage;
-    this->Energie_points = clapTrap.Energie_points;
-    this->Hitpoints = clapTrap.Hitpoints;
+    this->name = clapTrap.name;
+    this->attack_damage = clapTrap.attack_damage;
+    this->energy = clapTrap.energy;
+    this->hitpoints = clapTrap.hitpoints;
     return (clapTrap);
 }
 
@@ -48,7 +48,7 @@ ClapTrap::ClapTrap(ClapTrap &clapTrap)
 
 void ClapTrap::attack(std::string const &target)
 {
-    std::cout << "ClapTrap " << this->Name << " attack " << target << ", causing  " << this->Attack_damage << " points of damage!" << std::endl;
+    std::cout << "ClapTrap " << this->name << " attack " << target << ", causing  " << this->attack_damage << " points of damage!" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount)
@@ -63,14 +63,14 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 std::string ClapTrap::getName()
 {
-    return (this->Name);
+    return (this->name);
 }
 void ClapTrap::setName(std::string name)
 {
-    this->Name = name;
+    this->name = name;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << this->Name << " Destroyed from ClapTrap" << std::endl;
+    std::cout << this->name << " Destroyed from ClapTrap" << std::endl;
 }

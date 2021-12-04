@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:32:16 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/06 19:59:33 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/01 03:19:39 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie()
 {
-   
+   this->name = "Kanjuro";
 }
 Zombie::Zombie(std::string name)
 {

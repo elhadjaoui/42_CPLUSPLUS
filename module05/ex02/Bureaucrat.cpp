@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 04:12:05 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/04 19:31:25 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 19:33:35 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ Bureaucrat::Bureaucrat() : name("Someone")
     this->grade = 10;
 }
 
-Bureaucrat::Bureaucrat(int grade, const  std::string name) : name(name)
+Bureaucrat::Bureaucrat(int grade, const std::string name) : name(name)
 {
     if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
     if (grade < 1)
-        throw Bureaucrat::GradeTooLowException();
+        throw Bureaucrat::GradeTooHighException();
     this->grade = grade;
 }
 
@@ -36,12 +36,12 @@ Bureaucrat::~Bureaucrat()
 {
 }
 
-Bureaucrat &Bureaucrat::operator=(Bureaucrat &bureaucrat) 
+Bureaucrat &Bureaucrat::operator=(Bureaucrat &bureaucrat)
 {
     if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
     if (grade < 1)
-        throw Bureaucrat::GradeTooLowException();
+        throw Bureaucrat::GradeTooHighException();
     this->grade = bureaucrat.grade;
     return *this;
 }
@@ -53,14 +53,13 @@ Bureaucrat::Bureaucrat(Bureaucrat &bureaucrat)
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-    return "Grade Too High";
+    return "Bureaucrat Grade Too High";
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return "Grade Too Low";
+    return "Bureaucrat Grade Too Low";
 }
-
 
 std::string Bureaucrat::getName() const
 {
@@ -84,4 +83,15 @@ void Bureaucrat::increment()
     this->grade--;
     if (grade < 1)
         throw Bureaucrat::GradeTooHighException();
+}
+
+bool Bureaucrat::signForm(int grade_sign, std::string name)
+{
+    if (this->grade <= grade_sign)
+    {
+        std::cout << this->name << " signs " << name << std::endl;
+        return true;
+    }
+    std::cout << this->name << " cannot sign " << name << std::endl;
+    return false;
 }

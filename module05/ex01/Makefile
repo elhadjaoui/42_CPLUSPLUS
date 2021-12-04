@@ -6,7 +6,7 @@
 #    By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/29 23:24:20 by mel-hadj          #+#    #+#              #
-#    Updated: 2021/12/03 16:08:54 by mel-hadj         ###   ########.fr        #
+#    Updated: 2021/12/04 18:46:21 by mel-hadj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,12 +16,12 @@ CC =			clang++ -std=c++98
 
 FLAGS =			-Wall -Wextra -Werror
 
-HEADERS =		Bureaucrat.hpp 
+HEADERS =		Bureaucrat.hpp Form.hpp
 
 RM =			rm -rf 
 
 
-SRC =			main.cpp Bureaucrat.cpp 
+SRC =			main.cpp Bureaucrat.cpp Form.cpp
 			
 all:			$(NAME) 
 

@@ -34,6 +34,7 @@ public:
     void highFivesGuys(void);
     std::string getName();
     void setName(std::string);
+    void whoAmI();
 private :
     std::string Name;
 };

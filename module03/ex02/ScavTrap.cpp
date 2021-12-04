@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 03:34:53 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/21 03:32:45 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/04 11:56:36 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,41 @@
 
 ScavTrap::ScavTrap()
 {
-    std::cout <<  "Anonymous Created from ScavTrap" << std::endl;
-    this->Name = "Anonymous";
-    this->Hitpoints = 100;
-    this->Energie_points = 50;
-    this->Attack_damage = 20;
+    std::cout << "Anonymous Created from ScavTrap" << std::endl;
+    this->name = "Anonymous";
+    this->hitpoints = 100;
+    this->energy = 50;
+    this->attack_damage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-    std::cout <<  name << " Created from  ScavTrap" << std::endl;
-    
-    this->Name = name;
-    this->Hitpoints = 100;
-    this->Energie_points = 50;
-    this->Attack_damage = 20;
+    std::cout << name << " Created from  ScavTrap" << std::endl;
+
+    this->name = name;
+    this->hitpoints = 100;
+    this->energy = 50;
+    this->attack_damage = 20;
 }
 
-ScavTrap& ScavTrap::operator=(ScavTrap &scavTrap)
+ScavTrap &ScavTrap::operator=(ScavTrap &scavTrap)
 {
     std::cout << "Assignation operator called" << std::endl;
-    this->Name = scavTrap.Name;
-    this->Attack_damage = scavTrap.Attack_damage;
-    this->Energie_points = scavTrap.Energie_points;
-    this->Hitpoints = scavTrap.Hitpoints;
+    this->name = scavTrap.name;
+    this->attack_damage = scavTrap.attack_damage;
+    this->energy = scavTrap.energy;
+    this->hitpoints = scavTrap.hitpoints;
     return (scavTrap);
 }
 ScavTrap::ScavTrap(ScavTrap &scavTrap)
 {
     std::cout << "Copy constructor called" << std::endl;
-    operator=(scavTrap); 
+    operator=(scavTrap);
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << this->Name << " Destroyed from ScavTrap" << std::endl;
+    std::cout << this->name << " Destroyed from ScavTrap" << std::endl;
 }
 void ScavTrap::guardGate(void)
 {
@@ -56,14 +56,14 @@ void ScavTrap::guardGate(void)
 }
 void ScavTrap::attack(std::string const &target)
 {
-    std::cout << "ScavTrap " << this->Name  << " attack "<<  target << ", causing  " << this->Attack_damage << " points of damage!" << std::endl;
+    std::cout << "ScavTrap " << this->name << " attack " << target << ", causing  " << this->attack_damage << " points of damage!" << std::endl;
 }
 
-    std::string ScavTrap::getName()
-    {
-        return (this->Name);
-    }
-    void ScavTrap::setName(std::string name)
-    {
-        this->Name = name;
-    }
+std::string ScavTrap::getName()
+{
+    return (this->name);
+}
+void ScavTrap::setName(std::string name)
+{
+    this->name = name;
+}

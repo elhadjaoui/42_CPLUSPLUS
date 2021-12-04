@@ -12,7 +12,7 @@ SRC =			 Phonebook.cpp main.cpp Contact.cpp
 all:			$(NAME) 
 
 $(NAME) :		$(SRC) Contact.hpp Phonebook.hpp
-				@$(CC)   $(SRC) -o $(NAME)
+				@$(CC)  $(FLAGS)  $(SRC) -o $(NAME)
 				
 clean:
 
