@@ -6,22 +6,24 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:13:30 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/04 23:13:39 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/09 00:14:43 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
+// 0  ----> grade signing error
+// 1  ----> grade execetion error
+// 2  ----> file  error
 
-
-RobotomyRequestForm::RobotomyRequestForm() : name("Someone")
+RobotomyRequestForm::RobotomyRequestForm() : Form(45, 72, "RobotomyRequestForm")
 {
-    this->grade = 10;
+    this->target = "Default";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(int grade, const std::string name) : name(name)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(45, 72, "RobotomyRequestForm")
 {
-   
+    this->target = target;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
@@ -30,26 +32,45 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(RobotomyRequestForm &RobotomyRequestForm)
 {
-   
-    this->grade = RobotomyRequestForm.grade;
+    this->target = RobotomyRequestForm.target;
     return *this;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm &RobotomyRequestForm)
 {
-    operator=(RobotomyRequestForm);
+    this->target = RobotomyRequestForm.target;
 }
 
-
-
-std::string RobotomyRequestForm::getName() const
+RobotomyRequestForm::Error::Error(int i)
 {
-    return (this->name);
+    this->code = i;
 }
 
-int RobotomyRequestForm::getGrade() const
+const char *RobotomyRequestForm::Error::what() const throw()
 {
-    return (this->grade);
+    switch (this->code)
+    {
+    case 0:
+        return "Form isn't signed yet";
+        break;
+    case 1:
+        return "Form cannot executed owing to bureaucrat execution grade";
+        break;
+    default:
+        return "Something went wrong";
+        break;
+    }
 }
 
-
+void RobotomyRequestForm::execute(Bureaucrat const &executor) const
+{
+    if (!this->getIsSigned())
+        throw RobotomyRequestForm::Error(0);
+    if (executor.getGrade() > this->getGrade_Exec())
+        throw RobotomyRequestForm::Error(1);
+    srand((unsigned)time(0));
+    if ((rand() % 2))
+        std::cout << this->target << " has been robotomized successfully" << std::endl;
+    else
+        std::cout << " failed to robotomize " << this->target << std::endl;
+}

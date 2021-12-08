@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:52:36 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/04 23:14:34 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/08 23:56:36 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,23 @@
 
 class RobotomyRequestForm : public Form
 {
-private:
-    const std::string name;
-    int grade;
 
+    std::string target;
 public:
     RobotomyRequestForm();
-    RobotomyRequestForm(int , const std::string);
+    RobotomyRequestForm(std::string);
     RobotomyRequestForm(RobotomyRequestForm &);
     RobotomyRequestForm &operator=(RobotomyRequestForm &);
     ~RobotomyRequestForm();
+    void execute(Bureaucrat  const & executor) const;
+     class Error : public std::exception
+    {
+        public :
+            int code;
+            Error(int);
+            virtual const char* what() const throw();
+    };
 
-    std::string getName() const;
-    int getGrade() const;
-    void increment();
-    void decrement();
-    bool signForm(int, std::string);
-  
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 02:41:52 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/04 19:53:03 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/08 19:12:44 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
     try
     {
-        Bureaucrat b(1, "kim");
+        Bureaucrat b(0, "kim");
         Form form(10, 7, "report");
 
         std::cout << form;
