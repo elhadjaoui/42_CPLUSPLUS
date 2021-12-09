@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:39:35 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:46:53 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/05 11:14:02 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ Cat &Cat::operator=(Cat &breed)
 Cat::Cat(Cat &copy)
 {
     std::cout << "Cat's Copy constructor called" << std::endl;
+    this->type = copy.type;
+    
 }
 
 

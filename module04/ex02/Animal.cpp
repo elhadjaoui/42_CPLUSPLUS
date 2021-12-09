@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:23:46 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:43:20 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/05 15:38:25 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Animal & Animal::operator=(Animal & breed)
 Animal::Animal(Animal & copy) 
 {
     std::cout << "Animal's Copy constructor called" << std::endl;
-   
+   this->type = copy.type;
 }
 
 void Animal::makeSound() const 

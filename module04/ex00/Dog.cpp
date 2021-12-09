@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:48:42 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:46:57 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/05 12:00:53 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Dog & Dog::operator=(Dog & breed)
 Dog::Dog(Dog & copy)
 {
     std::cout << "Dog's Copy constructor called" << std::endl;
-   
+    this->type = copy.type;
 }
 
 void  Dog::makeSound() const
@@ -45,7 +45,7 @@ void Dog::setType(std::string type)
 {
     this->type = type;
 }
-std::string Dog::getType()
+std::string Dog::getType() const
 {
     return (this->type);
 }

@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:39:43 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/11/24 19:46:48 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/05 12:02:17 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 
 class Cat : public Animal
 {
-protected:
-    std::string type;
 
 public:
     Cat();
