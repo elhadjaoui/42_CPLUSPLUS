@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 15:16:01 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/08 22:59:48 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/10 15:08:45 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ public:
     Form(int , int ,const std::string);
     Form(Form &);
     Form &operator=(Form &);
-     class GradeTooHighException : public std::exception
+    class GradeTooHighException : public std::exception
     {
         public :
            virtual const char* what() const throw() ;

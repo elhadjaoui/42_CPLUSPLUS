@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 23:59:12 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/09 00:43:56 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/10 15:35:08 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "Form.hpp"
 
 
 class Bureaucrat 
