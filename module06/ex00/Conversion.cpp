@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 18:52:59 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/16 01:12:45 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/16 19:56:26 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void Conversion::print(int num)
   std::cout << "char: ";
   if (isprint(num))
     std::cout << static_cast<char>(num) << std::endl;
-  if (num < 0)
+  else if (num < 0)
      std::cout << "impossible" << std::endl;
   else
     std::cout << "Non displayable" << std::endl;
@@ -85,7 +85,7 @@ void Conversion::print(double num)
   std::cout << "char: ";
   if (isprint(num))
     std::cout << static_cast<char>(num) << std::endl;
-  if (num < 0)
+  else if (num < 0)
      std::cout << "impossible" << std::endl;
   else
     std::cout << "Non displayable" << std::endl;
