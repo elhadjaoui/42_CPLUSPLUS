@@ -6,27 +6,38 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 11:29:26 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/16 01:07:30 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/16 03:15:11 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "Conversion.hpp"
 
-int main(int argc, const char **argv)
+
+using namespace std;
+ 
+// creating structure mystruct
+struct Data {
+    int x;
+    
+};
+ uintptr_t serialize(Data* ptr)
+ {
+   return  reinterpret_cast<uintptr_t>(ptr);
+ }
+
+ Data* deserialize(uintptr_t raw)
+ {
+   return  reinterpret_cast<Data*>(raw);
+ }
+int main()
 {
+  Data ptr;
+  ptr.x = 5;
+  uintptr_t a = serialize(&ptr);
+  std::cout << a << std::endl;
+  Data *s = deserialize(a);
+  std::cout << s->x << std::endl;
   
-
-  if (argc == 2)
-  {
-    Conversion conversion;
-    conversion.convert(argv[1]);
-  }
-  else
-  {
-    std::cout << "More/Few Arguments" << std::endl;
-    return 1;    
-  }
-  return 0;
+    return 0;
 }

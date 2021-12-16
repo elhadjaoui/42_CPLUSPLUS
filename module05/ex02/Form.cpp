@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 15:17:27 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/08 22:59:56 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/11 02:40:00 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ std::ostream &operator<<(std::ostream &os, const Form &form)
 
 Form::Form() : name("Someone"), grade_execute(10), grade_sign(5)
 {
-    if (grade_execute > 150 || grade_execute > 150)
+    if (grade_execute > 150 || grade_sign > 150)
         throw Form::GradeTooLowException();
     if (grade_execute < 1 || grade_sign < 1)
-        throw Form::GradeTooLowException();
+        throw Form::GradeTooHighException();
     this->is_sgined = false;
 }
 
 Form::Form(int exec_grade, int sign_grade, const std::string name) : name(name), grade_execute(exec_grade), grade_sign(sign_grade)
 {
-    if (grade_execute > 150 || grade_execute > 150)
+    if (grade_execute > 150 || grade_sign > 150)
         throw Form::GradeTooLowException();
     if (grade_execute < 1 || grade_sign < 1)
         throw Form::GradeTooHighException();

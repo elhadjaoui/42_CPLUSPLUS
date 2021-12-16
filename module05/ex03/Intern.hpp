@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 11:29:26 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/16 01:07:30 by mel-hadj         ###   ########.fr       */
+/*   Created: 2021/12/10 22:37:53 by mel-hadj          #+#    #+#             */
+/*   Updated: 2021/12/10 23:51:32 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef _INTERN_H
+#define _INTERN_H
+
 #include <iostream>
 #include <string>
-#include "Conversion.hpp"
+#include "Form.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
-int main(int argc, const char **argv)
+
+
+class Intern
 {
-  
+public:
+    std::string name;
+    std::string target;
+    Intern();
+    Intern(Intern &);
+    Intern& operator=(Intern &);
+    ~Intern();
+    Form * makeForm(std::string , std::string);
+};
 
-  if (argc == 2)
-  {
-    Conversion conversion;
-    conversion.convert(argv[1]);
-  }
-  else
-  {
-    std::cout << "More/Few Arguments" << std::endl;
-    return 1;    
-  }
-  return 0;
-}
+#endif
+
