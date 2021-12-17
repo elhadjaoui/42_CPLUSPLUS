@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 11:29:26 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/16 04:43:48 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/17 22:19:43 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ void identify(Base *p)
   A *a;
   B *b;
   C *c;
-  if ((a = dynamic_cast<A *>(p)) != nullptr)
+  if ((a = dynamic_cast<A *>(p)) != NULL)
     std::cout << "A" << std::endl;
-  if ((b = dynamic_cast<B *>(p)) != nullptr)
+  if ((b = dynamic_cast<B *>(p)) != NULL)
     std::cout << "B" << std::endl;
-  if ((c = dynamic_cast<C *>(p)) != nullptr)
+  if ((c = dynamic_cast<C *>(p)) != NULL)
     std::cout << "C" << std::endl;
 }
 
@@ -51,12 +51,19 @@ void identify(Base &p)
     A &a = dynamic_cast<A &>(p);
     (void)a;
     std::cout << "A" << std::endl;
+  }
+  catch (std::bad_cast exp)
+  {
     try
     {
       B &b = dynamic_cast<B &>(p);
       (void)b;
       std::cout << "B" << std::endl;
-      try
+     
+    }
+    catch (std::bad_cast exp)
+    {
+       try
       {
         C &c = dynamic_cast<C &>(p);
         (void)c;
@@ -66,12 +73,6 @@ void identify(Base &p)
       {
       }
     }
-    catch (std::bad_cast exp)
-    {
-    }
-  }
-  catch (std::bad_cast exp)
-  {
   }
 }
 int main()

@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 18:52:59 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/16 19:56:26 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/17 23:53:50 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void Conversion::print(double num)
   std::cout << "int: ";
   std::cout << static_cast<int>(num) << std::endl;
   std::cout << "float: ";
-   std::cout << std::fixed <<  std::setprecision(1) << static_cast<float>(num)  << std::endl;
+   std::cout << std::fixed <<  std::setprecision(1) << static_cast<float>(num) << "f"  << std::endl;
   std::cout << "double: ";
   std::cout << num << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: mel-hadj <mel-hadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 11:29:26 by mel-hadj          #+#    #+#             */
-/*   Updated: 2021/12/16 03:15:11 by mel-hadj         ###   ########.fr       */
+/*   Updated: 2021/12/17 22:02:11 by mel-hadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 
 using namespace std;
- 
-// creating structure mystruct
+
 struct Data {
     int x;
     
