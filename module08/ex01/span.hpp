@@ -9,14 +9,14 @@
 
 class Span
 {
-private:
+   
+public:
     std::vector<unsigned int> vec;
     unsigned int N;
-public:
     Span(unsigned int n);
     Span();
     ~Span();
-    Span(Span &span);
+    // Span(Span &span);
     Span &operator=(Span &span);
     class Error : public std::exception
     {

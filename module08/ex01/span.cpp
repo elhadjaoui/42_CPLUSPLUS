@@ -11,11 +11,11 @@ Span::~Span()
 {
 }
 
-Span::Span(Span &span)
-{
-    this->vec = span.vec;
-    this->N = span.N;
-}
+// Span::Span(Span &span)
+// {
+//     this->vec = span.vec;
+//     this->N = span.N;
+// }
 
 Span &Span::operator=(Span &span)
 {
